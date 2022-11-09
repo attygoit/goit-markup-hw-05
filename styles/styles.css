@@ -256,6 +256,7 @@ img {
 /* Hero header - основний заголовок + кнопка замовлення послуги */
 
 .hero {
+  display: flex;
   background-image: linear-gradient(
       to right,
       var(--hero-bg-color),
@@ -263,7 +264,7 @@ img {
     ),
     url(../img/hero-bg-img.jpeg);
   background-color: var(--accent-bg-color);
-  max-width: 1600px;
+  min-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
