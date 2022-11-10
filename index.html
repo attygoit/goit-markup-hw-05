@@ -50,7 +50,7 @@
 					<br>
 					вашого бізнесу
 				</h1>
-				<button class="order-button">Замовити послугу</button>
+				<button data-open-modal class="order-button">Замовити послугу</button>
 			</div>
 			</section>
 			<!-- Особливості -->
@@ -107,7 +107,7 @@
 				<div class="container">
 					<h2 class="section-header">Чим ми займаємося</h2>
 					<ul class="activity-list">
-						<li>
+						<li class="activity-item">
 							<img
 								src="./img/img-b1.jpeg"
 								alt="руки на клавіатурі набирають код"
@@ -115,8 +115,9 @@
 								width="370"
 								height="294"
 							>
+							<div class="activity-description">Десктопні додатки</div>
 						</li>
-						<li>
+						<li class="activity-item">
 							<img
 								src="./img/img-b2.jpeg"
 								alt="смартфон та макет на моніторі, порівняння"
@@ -124,15 +125,17 @@
 								width="370"
 								height="294"
 							>
+							<div class="activity-description">Мобільні додатки</div>
 						</li>
-						<li>
+						<li class="activity-item">
 							<img
 								src="./img/img-b3.jpeg"
 								alt="палітра кольорів на планшеті"
-								class="activity-img"
+								class="activity-img"		
 								width="370"
 								height="294"
 							>
+							<div class="activity-description">Дизайнерські рішення</div>
 						</li>
 					</ul>
 				</div>
@@ -407,5 +410,16 @@
 				</div>
 			</div>
 		</footer>
+
+<div data-modal class="backdrop is-hidden">
+	<div class="modal">
+	<button type="button" class="modal-close-btn" data-close-modal>
+		<svg width="18" heihgt="18" class="modal-x">
+			<use href="./img/icons.svg#ico-x"></use>
+		</svg>
+	</button>
+</div>
+
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
