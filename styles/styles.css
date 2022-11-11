@@ -467,7 +467,7 @@ img {
   justify-content: center;
   border-radius: 50%;
   color: var(--social-link-color);
-  transition-property: color fill;
+  transition-property: color, fill;
 }
 
 .social-link:active,
@@ -574,7 +574,7 @@ img {
   display: block;
   position: relative;
   overflow: hidden;
- 
+
 }
 
 .portfolio-card-link:focus,
@@ -588,8 +588,7 @@ img {
 
 .portfolio-description {
   display: block;
-  position: absolute 
-  z-index: 3;
+  bottom: 110px;
   padding: 20px 24px;
   border: 1px solid;
   border-color: var(--accent-text-color) var(--border-color) var(--border-color) var(--border-color);
@@ -610,8 +609,16 @@ img {
   color: var(--main-text-color);
 }
 
+.card-overlay-frame {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
 .portfolio-card-overlay {
-  
   position: absolute;
   bottom: -294px;
   width: 370px;
@@ -628,7 +635,6 @@ img {
 .portfolio-card-link:hover .portfolio-card-overlay {
   box-sizing: border-box;
   position: absolute;
-  
   width: 370px;
   height: 294px;
   font-size: 18px;
@@ -636,12 +642,9 @@ img {
   letter-spacing: 0.03em;
   color: var(--accent-text-color);
   background-color: var(--overlay-bg-color);
-  /* padding: 63px 24px; */
   overflow: hidden;
-  /* opacity: 0.9; */
-  transform: translateY(-404px);
-  transition: transform 2000ms;
- 
+  transform: translateY(-294px);
+  transition: transform 250ms linear 150ms;
 }
 
 /* Бекдроп + модальне вікно */
@@ -649,7 +652,6 @@ img {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  
 }
 
 .backdrop {
@@ -680,7 +682,6 @@ img {
   align-items: center;
   justify-items: center;
   position: absolute;
-  display: ;
   top: 8px;
   right: 8px;
   width: 30px;
