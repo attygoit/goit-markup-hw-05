@@ -281,7 +281,7 @@ img {
       var(--hero-bg-color)),
     url(../img/hero-bg-img.jpeg);
   background-color: var(--accent-bg-color);
-  min-width: 1600px;
+  max-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -394,17 +394,14 @@ img {
   width: 100%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--accent-text-color);
   background-color: var(--activity-bg-color);
-  opacity: 0;
-
-  transition-property: opacity;
-}
-
-.activity-description:hover {
   opacity: 1;
 }
+
+/* .activity-description:hover {
+  opacity: 1;
+} */
 
 /* Наша команда (фото співробітників та підпис - прізвище, імʼя та назва посади, іконки соцмереж) */
 
@@ -569,12 +566,15 @@ img {
 
 .portfolio-card {
   background-color: var(--accent-text-color);
+  position: relative;
+  width: 370px;
 }
 
 .portfolio-card-link {
   display: block;
   position: relative;
   overflow: hidden;
+ 
 }
 
 .portfolio-card-link:focus,
@@ -589,7 +589,7 @@ img {
 .portfolio-description {
   display: block;
   position: absolute 
-  z-index: 2;
+  z-index: 3;
   padding: 20px 24px;
   border: 1px solid;
   border-color: var(--accent-text-color) var(--border-color) var(--border-color) var(--border-color);
@@ -610,10 +610,10 @@ img {
   color: var(--main-text-color);
 }
 
-.portfolio-card-link::before {
-  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A nisi nostrum officiis provident adipisci aliquid iusto optio beatae ullam alias.';
+.portfolio-card-overlay {
+  
   position: absolute;
-  bottom: -200px;
+  bottom: -294px;
   width: 370px;
   height: 294px;
   font-size: 18px;
@@ -625,9 +625,8 @@ img {
   overflow: hidden;
   }
 
-.portfolio-card-link:hover::before {
+.portfolio-card-link:hover .portfolio-card-overlay {
   box-sizing: border-box;
-  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A nisi nostrum officiis provident adipisci aliquid iusto optio beatae ullam alias.';
   position: absolute;
   
   width: 370px;
@@ -640,8 +639,9 @@ img {
   /* padding: 63px 24px; */
   overflow: hidden;
   /* opacity: 0.9; */
-  transform: translateY(-310px);
+  transform: translateY(-404px);
   transition: transform 2000ms;
+ 
 }
 
 /* Бекдроп + модальне вікно */
@@ -686,8 +686,8 @@ img {
   width: 30px;
   height: 30px;
   padding: 6px;
-  border: 1px solid rgba (0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.0);
   border-radius: 50%;
 }
 
